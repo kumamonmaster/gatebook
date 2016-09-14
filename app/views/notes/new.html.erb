@@ -2,8 +2,8 @@
 
 <%= form_tag notes_path do %>
   タイトル
-  <input type="text" class="form-control title-field", name="note[title]">
+  <%= text_field_tag 'note[title]', @note.title, class: "form-control title-field" %>
   内容
-  <textarea class="form-control content-field", name="note[content]"></textarea>
+  <%= text_area_tag 'note[content]', @note.content, class: "form-control content-field" %>
   <input type="submit" value="投稿する" class="btn primary-btn">
 <% end %>
