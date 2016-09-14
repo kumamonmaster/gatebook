@@ -17,4 +17,8 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id])
   end
+
+  def edit
+    @note = Note.find(params[:id])
+  end
 end
