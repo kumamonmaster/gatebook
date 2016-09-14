@@ -1,13 +1,17 @@
 class NotesController < ApplicationController
+  before_action :set_note, only: [:show, :edit, :update, :destroy]
+
   def new
+    @note = Note.new
   end
 
   def create
-    @note = Note.new
-    @note.title = params[:title]
-    @note.content = params[:content]
-    @note.save
-    redirect_to note_path(@note.id)
+    @note = Note.new(note_params)
+    if @note.save
+      redirect_to note_path(@note), notice: '投稿が保存されました'
+    else
+      render 'new'
+    end
   end
 
   def index
@@ -15,24 +19,30 @@ class NotesController < ApplicationController
   end
 
   def show
-    @note = Note.find(params[:id])
   end
 
   def edit
-    @note = Note.find(params[:id])
   end
 
   def update
-    @note = Note.find(params[:id])
-    @note.title = params[:title]
-    @note.content = params[:content]
-    @note.save
-    redirect_to note_path(@note.id)
+    if @note.update(note_params)
+      redirect_to note_path(@note.id), notice: '投稿が更新されました'
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-    @note = Note.find(params[:id])
     @note.destroy
     redirect_to notes_path
   end
+
+  private
+    def set_note
+      @note = Note.find(params[:id])
+    end
+
+    def note_params
+      params.require(:note).permit(:title, :content)
+    end
 end
