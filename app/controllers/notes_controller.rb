@@ -8,4 +8,8 @@ class NotesController < ApplicationController
     @note.content = params[:content]
     @note.save
   end
+
+  def index
+    @notes = Note.all
+  end
 end
