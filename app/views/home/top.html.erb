@@ -2,12 +2,12 @@
   <div class="container">
     <div id="logo">Gatebook</div>
     <ul class="header-right">
-      <li>Top</li>
-      <li>About</li>
+      <li><%= link_to 'Top', root_path %></li>
+      <li><%= link_to 'About', about_path %></li>
     </ul>
   </div>
 </header>
 
 <div class="container">
-  <h1>ようこそGatebookへ！</h1>
+  <h1><%= @message %></h1>
 </div>
