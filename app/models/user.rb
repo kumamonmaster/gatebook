@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :validatable
   has_many :notes
 
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
+  # validates :name, presence: true
+  # validates :email, presence: true, uniqueness: true
 
   def set_image(file)
     if !file.nil?

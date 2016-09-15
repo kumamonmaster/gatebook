@@ -11,18 +11,26 @@
   <body>
     <header class="navbar">
       <div class="container">
-        <div id="logo">Gatebook</div>
-        <ul class="header-right">
-          <li><%= link_to "トップ", root_path %></li>
-        <li><%= link_to "概要", about_path %></li>
-        <li><%= link_to "新規投稿", new_note_path %></li>
-        <li><%= link_to "投稿一覧", notes_path %></li>
-        <li><%= link_to "ユーザー一覧", users_path %></li>
-        </ul>
+        <div id="logo"><%= link_to "Gatebook", root_path %></div>
+        <% if user_signed_in? %>
+          <ul class="header-right">
+            <li><%= link_to "ユーザー一覧", users_path %></li>
+            <li><%= link_to current_user.email, current_user %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        <% else %>
+          <ul class="header-right">
+            <li><%= link_to "概要", about_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+          </ul>
+        <% end %>
       </div>
     </header>
 
     <div class="container">
+      <p class="alert alert-success"><%= notice %></p>
+      <p class="alert alert-danger"><%= alert %></p>
       <%= yield %>
     </div>
 
@@ -33,6 +41,5 @@
         </div>
       </footer>
     </div>
-
   </body>
 </html>
