@@ -19,11 +19,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     file = params[:user][:image]
-    if !file.nil?
-      file_name = file.original_filename
-      File.open("public/user_images/#{file_name}", 'wb'){ |f| f.write(file.read) }
-      @user.image = file_name
-    end
+    @user.set_image(file)
 
     if @user.save
       redirect_to @user, notice: 'ユーザーが保存されました'
@@ -33,23 +29,18 @@ class UsersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    file = params[:user][:image]
+    @user.set_image(file)
+    if @user.update(user_params)
+      redirect_to @user, notice: 'ユーザー情報が更新されました'
+    else
+      render :edit
     end
   end
 
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to users_url, notice: 'ユーザーが削除されました'
   end
 
   private
