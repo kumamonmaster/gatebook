@@ -1,0 +1,539 @@
+@charset "UTF-8";
+/* 共通レイアウト ================================ */
+/* line 3, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+body {
+  padding-top: 70px;
+  color: #364a4d;
+}
+
+/* line 8, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+ul, li {
+  list-style-type: none;
+}
+
+/* line 12, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+a {
+  text-decoration: none;
+  color: #1f89e2;
+}
+
+/* line 17, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+a:hover {
+  text-decoration: underline;
+  color: #1b7ccd;
+}
+
+/* line 22, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+/* line 30, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.heading {
+  display: inline-block;
+}
+
+/* フォント
+================================ */
+/* line 36, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+/* line 40, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+h1 {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+/* line 46, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  /*margin-bottom: 30px;*/
+  /*font-weight: normal;*/
+}
+
+/* line 53, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* ヘッダー ================================ */
+/* line 59, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.navbar {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  margin-bottom: 20px;
+}
+
+/* line 70, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  padding-top: 12px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+/* line 79, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 84, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.header-right {
+  float: right;
+  margin: 0 auto;
+}
+
+/* line 89, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.header-right a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 95, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.header-right li {
+  line-height: 65px;
+  padding: 0 18px;
+  float: left;
+  color: white;
+}
+
+/* line 102, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.vertical-line {
+  height: 22px;
+  margin-top: 22px;
+  margin-right: -36px;
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* line 109, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.link-bg {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+}
+
+/* line 114, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.link-bg:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* フッター ================================ */
+/* line 119, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+footer {
+  margin-top: 100px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #848484;
+}
+
+/* line 126, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+footer small {
+  float: left;
+}
+
+/* ボタン ================================ */
+/* line 131, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 「保存」ボタン */
+/* line 143, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.primary-btn {
+  background-color: #239b76;
+}
+
+/* line 147, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.primary-btn:hover {
+  background-color: #28b086;
+}
+
+/*　「編集」ボタン　*/
+/* line 152, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.edit-btn {
+  background-color: #239b76;
+}
+
+/* line 156, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.edit-btn:hover {
+  background-color: #28b086;
+  color: white;
+  text-decoration: none;
+}
+
+/*　「戻る」ボタン　*/
+/* line 163, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.destroy-btn {
+  background-color: #1f89e2;
+}
+
+/* line 167, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.destroy-btn:hover {
+  background-color: #3695e5;
+  color: white;
+  text-decoration: none;
+}
+
+/* フォーム================================ */
+/* line 174, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+input, textarea, select {
+  border: 1px solid #bbb;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+}
+
+/* line 181, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+
+/*　エラーメッセージ　*/
+/* line 194, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.alert {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+/* line 200, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.alert-success {
+  line-height: 40px;
+  padding-left: 15px;
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+/* line 207, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.alert-danger {
+  padding: 10px 20px;
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/* line 213, /vagrant/sample/gatebook/app/assets/stylesheets/common.scss */
+.alert-danger ul li {
+  list-style-type: disc;
+}
+@charset "UTF-8";
+/* 共通レイアウト ================================ */
+/* line 3, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+body {
+  padding-top: 60px;
+  color: #364a4d;
+}
+
+/* line 8, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+ul, li {
+  list-style-type: none;
+}
+
+/* line 12, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+a {
+  text-decoration: none;
+  color: #1f89e2;
+}
+
+/* line 17, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+a:hover {
+  text-decoration: underline;
+  color: #1b7ccd;
+}
+
+/* line 22, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+.container {
+  width: 980px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* フォント ================================ */
+/* line 30, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+/* line 34, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+h1 {
+  font-size: 32px;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+/* line 40, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+h2 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+/* line 45, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+p {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+/* ヘッダー ================================ */
+/* line 51, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+.navbar {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  margin-bottom: 20px;
+}
+
+/* line 62, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+#logo {
+  float: left;
+  font-size: 27px;
+  color: #fff;
+  padding-top: 12px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+/* line 71, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+.header-right {
+  float: right;
+  margin: 0 auto;
+}
+
+/* line 76, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+.header-right a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 82, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+.header-right li {
+  line-height: 65px;
+  padding: 0 18px;
+  float: left;
+  color: white;
+}
+
+/* フッター ================================ */
+/* line 90, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+footer {
+  margin-top: 100px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #848484;
+}
+
+/* line 97, /vagrant/sample/gatebook/app/assets/stylesheets/home.scss */
+footer .small {
+  float: left;
+  font-size: 14px;
+}
+@charset "UTF-8";
+/* 投稿一覧 ================================ */
+/* line 3, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.notes {
+  margin: 0;
+  float: left;
+  width: 60%;
+}
+
+/* line 9, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.notes li {
+  overflow: auto;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* 投稿 ================================ */
+/* line 16, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.notes .title, .notes .content {
+  display: block;
+}
+
+/* line 20, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.notes .title {
+  padding-top: 8px;
+}
+
+/* line 23, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.notes img {
+  display: inline-block;
+  margin-right: 12px;
+  float: left;
+  width: 56px;
+  height: 56px;
+}
+
+/* line 31, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+aside textarea {
+  height: 120px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+/* 投稿フォーム ================================ */
+/* line 40, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.user-id-field {
+  width: 100%;
+}
+
+/* line 43, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.title-field {
+  width: 97.2%;
+}
+
+/* line 46, /vagrant/sample/gatebook/app/assets/stylesheets/notes.scss */
+.content-field {
+  height: 90px;
+  width: 97.2%;
+}
+/* line 1, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, /vagrant/sample/gatebook/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
