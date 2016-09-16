@@ -3,15 +3,7 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
 
-  def index
-    @notes = Note.all
-  end
-
   def show
-  end
-
-  def new
-    @note = Note.new
   end
 
   def create
