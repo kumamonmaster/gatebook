@@ -1,24 +1,18 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_note, only: [:show, :edit, :update, :destroy]
-
-  def index
-    @notes = Note.all
-  end
+  before_action :correct_user, only: [:edit, :update]
 
   def show
   end
 
-  def new
-    @note = Note.new
-  end
-
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
     if @note.save
       redirect_to @note, notice: "投稿が保存されました"
     else
-      render :new
+      @notes = Note.all.order(created_at: :desc)
+      render 'home/top'
     end
   end
 
@@ -45,6 +39,13 @@ class NotesController < ApplicationController
     end
 
     def note_params
-      params.require(:note).permit(:title, :content, :user_id)
+      params.require(:note).permit(:title, :content)
+    end
+
+    def correct_user
+      note = Note.find(params[:id])
+      if !current_user?(note.user)
+        redirect_to root_path, alert: '許可されていないページです'
+      end
     end
 end
